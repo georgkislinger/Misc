@@ -17,13 +17,13 @@ def convert_file(input_dir, filename, output_dir):
 
 def main(input_dir, output_dir):
     for filename in os.listdir(input_dir):
-        if filename[-4:] == '.jpg':
+        if filename[-4:] == '.tif':
             convert_file(input_dir, filename, output_dir)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--input_dir', dest='input_dir', type=str,
-                    help='Input directory containing .jpg images')
+                    help='Input directory containing .tif images')
     parser.add_argument('--output_dir', dest='output_dir', type=str,
                     help='Output directory containing .h5 images')
     args = parser.parse_args()
